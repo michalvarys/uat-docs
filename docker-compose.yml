@@ -1,6 +1,7 @@
 services:
   app:
     build: .
+    container_name: michalvarys/uat-docs
     command: npm run preview
     ports:
       - "4173:4173"
