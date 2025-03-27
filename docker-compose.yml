@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    command: npm run preview
+    ports:
+      - "4173:4173"
+    volumes:
+      - .:/app

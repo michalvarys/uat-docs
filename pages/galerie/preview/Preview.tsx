@@ -16,7 +16,7 @@ import {
 
 const getRandomImage = () => gallery.images[Math.floor(Math.random() * gallery.images.length)]
 
-export default function Gallery() {
+export function Gallery() {
     const [columns, setColumns] = useState(3);
     const [spacing, setSpacing] = useState(0);
     const [aspectRatio, setAspectRatio] = useState("16/9");
