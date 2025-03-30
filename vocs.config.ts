@@ -12,7 +12,7 @@ export default defineConfig({
       },
       {
         text: "Pluginy",
-        collapsed: true,
+        collapsed: false,
         items: [
           {
             text: "Odkazy",
@@ -28,6 +28,22 @@ export default defineConfig({
                 link: "/pluginy/galerie/preview",
               },
             ],
+          },
+          {
+            text: "Seznam karet",
+            link: "/pluginy/karty",
+          },
+          {
+            text: "Accordion",
+            link: "/pluginy/accordion",
+          },
+          {
+            text: "HTML kód",
+            link: "/pluginy/code",
+          },
+          {
+            text: "Záložky",
+            link: "/pluginy/tabs",
           },
         ],
       },
