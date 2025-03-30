@@ -18,7 +18,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "rootDir": ".",
+    "paths": {
+      "@/*": ["./*"],
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.d.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

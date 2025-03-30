@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { GalleryView } from "@ssupat/components";
-import { gallery } from "../data";
 import {
     Box,
     Button,
@@ -13,6 +12,29 @@ import {
     NumberInputStepper,
     Select,
 } from "@chakra-ui/react";
+
+const gallery = {
+    images: [
+        {
+            src: "https://placehold.co/600x400/000000/FFFFFF/png",
+            alt: "Testovací obrázek",
+            title: "Testovací obrázek",
+        },
+        {
+            src: "https://placehold.co/600x400/EEE/31343C",
+            alt: "Testovací obrázek",
+            title: "Testovací obrázek",
+        },
+        {
+            src: "https://placehold.co/600x400/ffdddd/FFFFFF/png",
+            alt: "Testovací obrázek",
+            title: "Testovací obrázek",
+        },
+    ],
+    aspectRatio: "16/9",
+    columns: 2,
+    spacing: 4,
+};
 
 const getRandomImage = () => gallery.images[Math.floor(Math.random() * gallery.images.length)]
 
@@ -112,3 +134,5 @@ export function Gallery() {
         </Box>
     )
 }
+
+export default Gallery

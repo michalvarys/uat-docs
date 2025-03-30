@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vocs dev",
     "build": "vocs build",
-    "preview": "vocs preview"
+    "preview": "vocs preview",
+    "start": "vocs start"
   },
   "license": "ISC",
   "description": "",
