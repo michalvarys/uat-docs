@@ -53,4 +53,9 @@ export default defineConfig({
       },
     },
   },
+  vite: {
+    server: {
+      allowedHosts: ["uat-docs.varyshop.eu", "docs.uat.sk", "localhost"],
+    },
+  },
 });
