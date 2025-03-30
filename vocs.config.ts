@@ -7,7 +7,7 @@ export default defineConfig({
   sidebar: {
     "/": [
       {
-        text: "Přehled",
+        text: "Rozcestník",
         link: "/",
       },
       {
@@ -16,20 +16,24 @@ export default defineConfig({
         items: [
           {
             text: "Odkazy",
-            link: "/odkazy",
+            link: "/pluginy/odkazy",
           },
           {
             text: "Galerie",
-            link: "/galerie",
+            link: "/pluginy/galerie",
             collapsed: true,
             items: [
               {
                 text: "Interaktivní ukázka galerie",
-                link: "/galerie/preview",
+                link: "/pluginy/galerie/preview",
               },
             ],
           },
         ],
+      },
+      {
+        text: "Nastavení",
+        link: "/nastaveni",
       },
     ],
   },

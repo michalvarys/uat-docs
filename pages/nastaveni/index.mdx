@@ -1,0 +1,57 @@
+# Konfigurace, build a spuštění docker containerů
+
+## Jak nastavit nastavit `.env` prostředí
+```
+# Nastavení databáze pro připojení
+POSTGRESQL_DB=databse-name
+POSTGRESQL_PASS=database-password
+POSTGRESQL_USER=database-user
+POSTGRESQL_PORT=databse-port
+
+# host pro databázi - může být jméno database service v be-docker-compose.yml (database) nebo 0.0.0.0 (localhost na linuxu)
+POSTGRESQL_HOST=database
+
+#jméno clienta adaptéru databáze pro strapi cms 
+DATABASEL_CLIENT=postgres 
+
+# frontend doména
+FE_DOMAIN=uat.sk 
+# frontend port
+FE_PORT=3000
+
+# backend doména
+BE_DOMAIN=cms.uat.sk
+# backend host (jméno strapi containeru nebo adresa) 
+BE_HOST=backend 
+# backend port
+BE_PORT=1337
+
+# email pro lets-encrypt challenge
+EMAIL=admin@uat.sk
+```
+
+## Build kontainerů
+
+1. backend container build
+`docker-compose build strapi`
+
+2. spuštění backendu (loadbalancer, strapi)
+`docker-compose up -d strapi traefik postgresql`
+
+3. frontend container build (pro správné vygenerování stránek je potřeba aby byl spuštěn backend container viz bod 2)
+`docker-compose build frontend` nebo `docker-compose up -d --build frontend` pro spuštění po úspěšném buildu
+
+4. spuštění frontend containeru
+`docker-compose up -d frontend`
+
+
+## Zastavení / Spouštění kontainerů 
+- zastavení kontainerů
+`docker-compose down`
+- spuštění kontainerů
+`docker-compose up -d`
+
+**POKUD SE ZMĚNIL KÓD CMS/FRONTENDU, JE POTŘEBA NOVÝ BUILD CONTAINERU!**
+
+pokud byl frontend/backend přebuilděn, pro aplikování nového buildu stačí tento příkaz, který znovu vytvoří kontainery na dostupných buildech
+`docker-compose up -d --force-recreate strapi frontend`
