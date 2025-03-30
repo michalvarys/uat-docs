@@ -15,12 +15,16 @@ export default defineConfig({
         collapsed: true,
         items: [
           {
+            text: "Odkazy",
+            link: "/odkazy",
+          },
+          {
             text: "Galerie",
             link: "/galerie",
             collapsed: true,
             items: [
               {
-                text: "Interaktivní ukázka",
+                text: "Interaktivní ukázka galerie",
                 link: "/galerie/preview",
               },
             ],
@@ -37,12 +41,12 @@ export default defineConfig({
       sidebar: {
         width: "15vw",
         verticalPadding: "5px",
-        horizontalPadding: "5px",
+        horizontalPadding: "20px",
       },
       content: {
         width: "70vw",
         verticalPadding: "5px",
-        horizontalPadding: "15px",
+        horizontalPadding: "20px",
       },
       outline: {
         width: "15vw",
