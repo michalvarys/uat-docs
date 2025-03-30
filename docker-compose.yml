@@ -2,6 +2,5 @@ services:
   app:
     build: .
     image: michalvarys/uat-docs
-    command: npm run preview
     ports:
       - "5173:5173"

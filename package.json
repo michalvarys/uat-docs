@@ -6,7 +6,7 @@
     "dev": "vocs dev",
     "build": "vocs build",
     "preview": "vocs preview",
-    "start": "vocs start"
+    "start": "vocs start --host"
   },
   "license": "ISC",
   "description": "",
